@@ -1,0 +1,10 @@
+<?xml version="1.0" ?>
+<testsuites>
+	<testsuite errors="0" errors_detail="H:0 M:0 L:0" failures="1" failures_detail="H:0 M:1 L:0" hostname="relax" name="Relax" tests="2" time="16.428149" timestamp="2019-01-17T12:47:24.992190">
+		<testcase classname="LOGIN_001" name="打开Relax" priority="M" time="6.704091"/>
+		<testcase classname="LOGIN_002" name="打开Relax" priority="M" time="7.167053">
+			<failure message="step-2|CHECK|登录页面-登录界面信息: Message: 
+" type="Fail"/>
+		</testcase>
+	</testsuite>
+</testsuites>

@@ -1,0 +1,6 @@
+<?xml version="1.0" ?>
+<testsuites>
+	<testsuite errors="0" errors_detail="H:0 M:0 L:0" failures="0" failures_detail="H:0 M:0 L:0" hostname="cheetah" name="Cheetah" tests="1" time="22.833684" timestamp="2019-01-28T19:02:54.074058">
+		<testcase classname="IPGM_001" name="IP分组管理" priority="M" time="19.823259"/>
+	</testsuite>
+</testsuites>

@@ -1,0 +1,12 @@
+<?xml version="1.0" ?>
+<testsuites>
+	<testsuite errors="0" errors_detail="H:0 M:0 L:0" failures="2" failures_detail="H:0 M:2 L:0" hostname="cheetah" name="Cheetah" tests="2" time="26.554442" timestamp="2019-01-29T18:42:44.997181">
+		<testcase classname="IPGM_001" name="IP分组管理 - 添加IP分组" priority="M" time="16.591789">
+			<failure message="step-2|CHECK|系统管理员: string indices must be integers" type="Fail"/>
+		</testcase>
+		<testcase classname="IPGM_002" name="IP分组管理 - 查看IP分组" priority="M" time="7.069452">
+			<failure message="step-1|CHECK|IP分组管理页面-新添加IP分组: Message: 
+" type="Fail"/>
+		</testcase>
+	</testsuite>
+</testsuites>

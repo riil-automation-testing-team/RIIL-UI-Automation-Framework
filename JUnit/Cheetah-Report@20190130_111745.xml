@@ -1,0 +1,14 @@
+<?xml version="1.0" ?>
+<testsuites>
+	<testsuite errors="0" errors_detail="H:0 M:0 L:0" failures="1" failures_detail="H:0 M:1 L:0" hostname="cheetah" name="Cheetah" tests="4" time="40.444233" timestamp="2019-01-30T11:17:46.269913">
+		<testcase classname="IPGM_001" name="添加IP分组" priority="M" time="28.943781"/>
+		<testcase classname="IPGM_002" name="查看IP分组" priority="M" time="0.285496"/>
+		<testcase classname="IPGM_003" name="编辑IP分组" priority="M" time="7.878107">
+			<failure message="step-2|INPUT|IP分组管理页面-IP地址: Message: 
+" type="Fail"/>
+		</testcase>
+		<testcase classname="IPGM_004" name="删除IP分组" priority="M" time="3.3e-05">
+			<blocked message="Main or pre Sub testcase is not pass" type="Blocked"/>
+		</testcase>
+	</testsuite>
+</testsuites>

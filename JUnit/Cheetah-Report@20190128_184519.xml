@@ -1,0 +1,6 @@
+<?xml version="1.0" ?>
+<testsuites>
+	<testsuite errors="0" errors_detail="H:0 M:0 L:0" failures="0" failures_detail="H:0 M:0 L:0" hostname="cheetah" name="Cheetah" tests="1" time="23.873106" timestamp="2019-01-28T18:45:19.607024">
+		<testcase classname="LOGIN_001" name="打开Cheetah正确登录" priority="M" time="21.295373"/>
+	</testsuite>
+</testsuites>

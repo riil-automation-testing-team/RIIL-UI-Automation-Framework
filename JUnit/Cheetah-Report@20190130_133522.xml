@@ -1,0 +1,9 @@
+<?xml version="1.0" ?>
+<testsuites>
+	<testsuite errors="0" errors_detail="H:0 M:0 L:0" failures="0" failures_detail="H:0 M:0 L:0" hostname="cheetah" name="Cheetah" tests="4" time="39.168793" timestamp="2019-01-30T13:35:23.209368">
+		<testcase classname="IPGM_001" name="添加IP分组" priority="M" time="28.139876"/>
+		<testcase classname="IPGM_002" name="查看IP分组" priority="M" time="0.310218"/>
+		<testcase classname="IPGM_003" name="编辑IP分组" priority="M" time="4.684932"/>
+		<testcase classname="IPGM_004" name="删除IP分组" priority="M" time="3.62196"/>
+	</testsuite>
+</testsuites>

@@ -1,0 +1,15 @@
+<?xml version="1.0" ?>
+<testsuites>
+	<testsuite errors="0" errors_detail="H:0 M:0 L:0" failures="1" failures_detail="H:0 M:1 L:0" hostname="cheetah" name="Cheetah" tests="3" time="9.930149" timestamp="2019-01-30T15:04:18.780719">
+		<testcase classname="IPGM_002" name="查看IP分组" priority="M" time="5.779286">
+			<failure message="step-1|CHECK|通用-查找DIV元素名称#Automation testing: Message: 
+" type="Fail"/>
+		</testcase>
+		<testcase classname="IPGM_003" name="编辑IP分组" priority="M" time="2.8e-05">
+			<blocked message="Main or pre Sub testcase is not pass" type="Blocked"/>
+		</testcase>
+		<testcase classname="IPGM_004" name="删除IP分组" priority="M" time="7e-06">
+			<blocked message="Main or pre Sub testcase is not pass" type="Blocked"/>
+		</testcase>
+	</testsuite>
+</testsuites>
