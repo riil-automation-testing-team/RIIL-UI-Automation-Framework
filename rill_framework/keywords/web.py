@@ -56,6 +56,7 @@ def open(step):
             w.init()
         g.driver.get(value)
         w.open(step)
+    g.driver.maximize_window()
     sleep(0.5)
 
 
