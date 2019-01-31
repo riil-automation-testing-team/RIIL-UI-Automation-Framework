@@ -1,4 +1,3 @@
-
 web_keywords = {
     '打开': 'OPEN',
     'OPEN': 'OPEN',
@@ -29,7 +28,15 @@ web_keywords = {
     '上传文件': 'UPLOAD',
     'UPLOAD': 'UPLOAD',
     '刷新': 'REFRESH',
-    'REFRESH': 'REFRESH'
+    'REFRESH': 'REFRESH',
+    '后退': 'BACK',
+    'BACK': 'BACK',
+    '前进':'FORWARD',
+    'FORWARD':'FORWARD',
+    '比较': 'CMP_NUMBER',
+    'CMP_NUMBER': 'CMP_NUMBER',
+    '截图':'SCREENSHOT',
+    'SCREENSHOT':'SCREENSHOT'
 }
 
 common_keywords = {
