@@ -1,14 +1,13 @@
-import re
-import operator
-from time import sleep
-from PIL import Image
 from selenium.webdriver.common.action_chains import ActionChains
-from sweetest.elements import e
-from sweetest.globals import g
-from sweetest.locator import locating_element
-from sweetest.log import logger
-from sweetest.utility import compare
-from sweetest.windows import w
+from time import sleep
+import re
+from rill_framework.globals import g
+from rill_framework.elements import e
+from rill_framework.windows import w
+from rill_framework.locator import locating_elements, locating_data, locating_element
+from rill_framework.log import logger
+from rill_framework.parse import data_format
+from rill_framework.utility import compare
 
 
 class Common():
@@ -39,7 +38,7 @@ class Common():
 
 def open(step):
     element = step['element']
-    el, value = e.get(element)
+    value = e.get(element)[1]
     if step['data'].get('清理缓存', '') or step['data'].get('cookie', ''):
         g.driver.delete_all_cookies()
     if step['data'].get('打开方式', '') == '新标签页' or step['data'].get('mode', '').lower() == 'tab':
@@ -118,7 +117,7 @@ def notcheck(step):
         data = step['expected']
 
     element = step['element']
-    element_location = locating_element(element)
+    # element_location = locating_element(element)
 
     if e.elements[element]['by'] == 'title':
         assert data['text'] != g.driver.title
@@ -144,6 +143,7 @@ def input(step):
 
 
 def click(step):
+    # sleep(1)
     element = step['element']
     if isinstance(element, str):
         element_location = locating_element(element, 'CLICK')
@@ -232,16 +232,17 @@ def swipe(step):
 
 def script(step):
     element = step['element']
-    el, value = e.get(element)
+    value = e.get(element)[1]
     g.driver.execute_script(value)
+
 
 def message(step):
     data = step['data']
     text = data.get('text', '')
     element = step['element']
-    el, value = e.get(element)
+    value = e.get(element)[1]
 
-    if value.lower() in ('确认', 'accept'):
+    if value.lower() in ('确认', 'accept', '确定'):
         g.driver.switch_to_alert().accept()
     elif value.lower() in ('取消', '关闭', 'cancel', 'close'):
         g.driver.switch_to_alert().dismiss()
@@ -271,41 +272,3 @@ def upload(step):
 
 def refresh(step):
     g.driver.refresh()
-
-# add by bournli on 2019/1/30
-
-
-def back(step):
-    g.driver.back()
-
-
-def forward():
-    g.driver.forward()
-
-
-def cmp_number(step):
-    expected = step['expected']
-    real = step['data']
-    logger.info('DATA:%.1f' % float(expected['text']))
-    logger.info('REAL:%.1f' % float(real['text']))
-    assert float(expected['text']) >= float(real['text'])
-
-
-def screenshot(step):
-    g.driver.maximize_window()
-    g.driver.save_screenshot(r'./allscreen.png')
-    element = step['element']
-    if isinstance(element, str):
-        element_location = locating_element(element)
-    left = element_location .location['x']
-    top = element_location .location['y']
-    elementWidth = element_location .location['x'] + element_location .size['width']
-    elementHeight = element_location .location['y'] + element_location .size['height']
-    picture = Image.open(r'./allscreen.png')
-    left = int(left * 1.5)
-    top = int(top * 1.5)
-    elementWidth = int(elementWidth * 1.5)
-    elementHeight = int(elementHeight * 1.5)
-    logger.info('元素坐标:x=%d,y=%d,w=%d,h=%d', left, top, elementWidth, elementHeight)
-    picture = picture.crop((left, top, elementWidth, elementHeight))
-    picture.save(r'./elementshot.png')
