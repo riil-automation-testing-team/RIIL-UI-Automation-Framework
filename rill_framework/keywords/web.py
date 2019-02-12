@@ -1,6 +1,7 @@
 from selenium.webdriver.common.action_chains import ActionChains
 from time import sleep
 import re
+from PIL import Image
 from rill_framework.globals import g
 from rill_framework.elements import e
 from rill_framework.windows import w
@@ -272,3 +273,38 @@ def upload(step):
 
 def refresh(step):
     g.driver.refresh()
+
+def back(step):
+    g.driver.back()
+
+
+def forward():
+    g.driver.forward()
+
+
+def cmp_number(step):
+    expected = step['expected']
+    real = step['data']
+    logger.info('DATA:%.1f' % float(expected['text']))
+    logger.info('REAL:%.1f' % float(real['text']))
+    assert float(expected['text']) >= float(real['text'])
+
+
+def screenshot(step):
+    g.driver.maximize_window()
+    g.driver.save_screenshot(r'./allscreen.png')
+    element = step['element']
+    if isinstance(element, str):
+        element_location = locating_element(element)
+    left = element_location .location['x']
+    top = element_location .location['y']
+    elementWidth = element_location .location['x'] + element_location .size['width']
+    elementHeight = element_location .location['y'] + element_location .size['height']
+    picture = Image.open(r'./allscreen.png')
+    left = int(left * 1.5)
+    top = int(top * 1.5)
+    elementWidth = int(elementWidth * 1.5)
+    elementHeight = int(elementHeight * 1.5)
+    logger.info('元素坐标:x=%d,y=%d,w=%d,h=%d', left, top, elementWidth, elementHeight)
+    picture = picture.crop((left, top, elementWidth, elementHeight))
+    picture.save(r'./elementshot.png')
