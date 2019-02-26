@@ -1,0 +1,12 @@
+<?xml version="1.0" ?>
+<testsuites>
+	<testsuite errors="0" errors_detail="H:0 M:0 L:0" failures="1" failures_detail="H:0 M:1 L:0" hostname="cheetah" name="Cheetah" tests="4" time="40.47404" timestamp="2019-01-30T11:34:38.974258">
+		<testcase classname="IPGM_001" name="添加IP分组" priority="M" time="27.111989"/>
+		<testcase classname="IPGM_002" name="查看IP分组" priority="M" time="0.280954"/>
+		<testcase classname="IPGM_003" name="编辑IP分组" priority="M" time="4.309987"/>
+		<testcase classname="IPGM_004" name="删除IP分组" priority="M" time="6.437523">
+			<failure message="step-2|CLICK|IP分组管理页面-删除ICON#Automation testing: Message: 
+" type="Fail"/>
+		</testcase>
+	</testsuite>
+</testsuites>

@@ -1,0 +1,6 @@
+<?xml version="1.0" ?>
+<testsuites>
+	<testsuite errors="0" errors_detail="H:0 M:0 L:0" failures="0" failures_detail="H:0 M:0 L:0" hostname="relax" name="Relax" tests="1" time="8.380252" timestamp="2019-01-17T11:22:14.091264">
+		<testcase classname="HOME_001" name="打开Relax" priority="M" time="6.018991"/>
+	</testsuite>
+</testsuites>

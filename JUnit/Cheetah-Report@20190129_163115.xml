@@ -1,0 +1,9 @@
+<?xml version="1.0" ?>
+<testsuites>
+	<testsuite errors="0" errors_detail="H:0 M:0 L:0" failures="1" failures_detail="H:0 M:1 L:0" hostname="cheetah" name="Cheetah" tests="1" time="27.057197" timestamp="2019-01-29T16:31:15.955986">
+		<testcase classname="IPGM_001" name="IP分组管理" priority="M" time="24.558151">
+			<failure message="step-6|CLICK|主页-添加IP分组: Message: 
+" type="Fail"/>
+		</testcase>
+	</testsuite>
+</testsuites>

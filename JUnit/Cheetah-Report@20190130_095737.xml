@@ -1,0 +1,7 @@
+<?xml version="1.0" ?>
+<testsuites>
+	<testsuite errors="0" errors_detail="H:0 M:0 L:0" failures="0" failures_detail="H:0 M:0 L:0" hostname="cheetah" name="Cheetah" tests="2" time="29.956031" timestamp="2019-01-30T09:57:38.408520">
+		<testcase classname="IPGM_001" name="添加IP分组" priority="M" time="27.322209"/>
+		<testcase classname="IPGM_002" name="查看IP分组" priority="M" time="0.263538"/>
+	</testsuite>
+</testsuites>

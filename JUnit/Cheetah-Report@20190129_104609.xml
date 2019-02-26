@@ -1,0 +1,8 @@
+<?xml version="1.0" ?>
+<testsuites>
+	<testsuite errors="0" errors_detail="H:0 M:0 L:0" failures="1" failures_detail="H:0 M:1 L:0" hostname="cheetah" name="Cheetah" tests="1" time="20.501741" timestamp="2019-01-29T10:46:10.539437">
+		<testcase classname="IPGM_001" name="IP分组管理" priority="M" time="17.599105">
+			<failure message="step-4|CLICK|系统配置#rii-menu-indent-0 item-parent-selected item-parent-selected-mini item-parent#2: string indices must be integers" type="Fail"/>
+		</testcase>
+	</testsuite>
+</testsuites>

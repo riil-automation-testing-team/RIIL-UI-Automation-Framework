@@ -1,0 +1,10 @@
+<?xml version="1.0" ?>
+<testsuites>
+	<testsuite errors="0" errors_detail="H:0 M:0 L:0" failures="1" failures_detail="H:0 M:1 L:0" hostname="relax" name="Relax" tests="2" time="24.186259" timestamp="2019-01-18T14:17:58.644630">
+		<testcase classname="LOGIN_001" name="打开Relax正确登录" priority="M" time="13.866315">
+			<failure message="step-2|CHECK|Relax主页-工作台Tab: Message: 
+" type="Fail"/>
+		</testcase>
+		<testcase classname="LOGIN_002" name="打开Relax密码为空" priority="M" time="6.373393"/>
+	</testsuite>
+</testsuites>
